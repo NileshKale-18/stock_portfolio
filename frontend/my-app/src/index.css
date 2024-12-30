@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;600&display=swap');
+
+
+
+.h-primary{
+  color: yellow;
+}
+
+*{
+  background-color: black;
+  font-family: "Montserrat", serif;
+  color: white;
+
+}
+.total-value {
+  color: green; /* Change to the desired color */
+  font-weight: bold;
+  font-size: 1.5rem;
+}
