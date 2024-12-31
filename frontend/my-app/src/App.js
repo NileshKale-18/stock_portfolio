@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -28,6 +28,15 @@ const App = () => {
             console.error('Error fetching stocks:', error);
         }
     };
+
+    useEffect(() => {
+        fetchStocks(); // Initial fetch
+        const interval = setInterval(() => {
+            fetchStocks(); // Fetch every 5 seconds
+        }, 5000);
+        return () => clearInterval(interval); // Cleanup interval on component unmount
+    }, []);
+
 
 
     const addOrEditStock = async (event) => {
