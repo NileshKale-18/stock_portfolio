@@ -21,7 +21,7 @@ const App = () => {
 
     const fetchStocks = async () => {
         try {
-            const response = await fetch('http://localhost:5000/api/stocks'); // Replace with your backend URL
+            const response = await fetch('https://stock-portfolio-4j4x.onrender.com/api/stocks'); // Replace with your backend URL
             const data = await response.json();
             setStocks(data); // Update the stocks state with fetched data
         } catch (error) {
@@ -35,8 +35,8 @@ const App = () => {
     
       try {
         const apiUrl = stockForm.id
-          ? `http://localhost:5000/api/stocks/${stockForm.id}` // For updating an existing stock
-          : 'http://localhost:5000/api/stocks'; // For adding a new stock
+          ? `https://stock-portfolio-4j4x.onrender.com/api/stocks/${stockForm.id}` // For updating an existing stock
+          : 'https://stock-portfolio-4j4x.onrender.com/api/stocks'; // For adding a new stock
     
         const method = stockForm.id ? 'PUT' : 'POST'; // Use PUT for updates, POST for new
     
@@ -71,7 +71,7 @@ const App = () => {
   const deleteStock = async (id) => {
     console.log(`deleteStock function called with ID: ${id}`); // Log function call
     try {
-        const response = await fetch(`http://localhost:5000/api/stocks/${id}`, {
+        const response = await fetch(`https://stock-portfolio-4j4x.onrender.com/api/stocks/${id}`, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }, // Include headers
         });

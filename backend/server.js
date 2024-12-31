@@ -7,7 +7,7 @@ const app = express(); // Create an Express application
 
 // Middleware
 app.use(cors()); // Allow requests from any origin
-app.use(bodyParser.json()); // Parse JSON request bodies
+app.use(bodyParser.json({ origin: 'https://stock-portfolio-zwp6.vercel.app' })); // Parse JSON request bodies
 
 // MongoDB connection
 const mongoURI = process.env.MONGO_URI || 'mongodb+srv://kalenilesh8459:nilesh@stock.6oov4.mongodb.net/stockholder?retryWrites=true&w=majority&appName=Stock';
